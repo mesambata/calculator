@@ -1,0 +1,39 @@
+//Basic People Counter
+pragma solidity >=0.4.22 <0.7.0;
+
+contract Calculator {
+    uint public a = 1;
+    uint public b = 1;
+    
+    // Calling a function
+    uint add = sum(a,b);
+    uint sub = subtract(a,b);
+    uint mul = multiply(a,b);
+    uint div = divide(a,b);
+    
+    // pure type function ensures that state of variable will be not modified , it will readonly
+    function sum (uint _a, uint _b) public pure returns(uint) {
+        uint c;
+        c = _a + _b;
+        return c;
+    }
+    
+    function subtract (uint _a, uint _b) public pure returns(uint) {
+        uint c;
+        c = _a - _b;
+        return c;
+    }
+    
+    function multiply (uint _a, uint _b) public pure returns(uint) {
+        uint c;
+        c = _a * _b;
+        return c;
+    }
+    
+    function divide (uint _a, uint _b) public pure returns(uint) {
+        uint c;
+        c = _a / _b;
+        return c;
+    }
+    
+}
